@@ -8,14 +8,15 @@
   }
   border-radius: 10px;
   color: $light;
+  user-select: none;
 
   &:active {
-    opacity: 0.9;
+    opacity: 0.7;
   }
 
   &:disabled {
     opacity: 0.5;
-    pointer-events: none;
+    cursor: not-allowed;
   }
 
   &-green {
@@ -24,5 +25,15 @@
 
   &-red {
     background: $crimson;
+  }
+
+  &-dark {
+    background: $dark;
+  }
+
+  &-dark-outline {
+    background: transparent;
+    border: 1px solid $dark;
+    color: $dark;
   }
 }
