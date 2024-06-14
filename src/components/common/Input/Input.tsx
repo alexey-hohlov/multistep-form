@@ -1,5 +1,6 @@
 import { useController } from 'react-hook-form';
 import { defaultMessage } from '../../../utils/validations';
+import { ErrorIcon } from '../../../assets';
 
 interface Props {
   name: string;
@@ -35,7 +36,7 @@ const Input: React.FC<Props> = ({
 
   const {
     field,
-    // fieldState: { error, isDirty },
+    fieldState: { error, isDirty },
   } = useController({
     name,
     rules: handleValidations(),
@@ -45,7 +46,11 @@ const Input: React.FC<Props> = ({
   return (
     <label className={classNameLabel}>
       {label}
-      <input className={`input ${classNameInput}`} />
+      <input
+        {...field}
+        className={`input ${classNameInput} ${error && 'error'}`}
+      />
+      {error && <ErrorIcon />}
     </label>
   );
 };

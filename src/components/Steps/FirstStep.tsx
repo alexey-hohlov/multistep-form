@@ -3,8 +3,7 @@ import { Input } from '../';
 const FirstStep: React.FC = () => {
   return (
     <div className='flex flex-col gap-3'>
-      1
-      {/* <Input
+      <Input
         name='firstName'
         validations={''}
         label={'First Name'}
@@ -27,7 +26,7 @@ const FirstStep: React.FC = () => {
         validations={''}
         label={'Phone'}
         classNameLabel='flex flex-col gap-2'
-      /> */}
+      />
     </div>
   );
 };

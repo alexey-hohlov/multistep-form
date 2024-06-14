@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from 'react-hook-form';
+import { useMultiStepForm } from '../../hooks/useMultiStepForm';
 import { Button, FirstStep, SecondStep, ThirdStep } from '../';
 import staticText from '../../assets/static.json';
-import { useMultiStepForm } from '../../hooks/useMultiStepForm';
 
 const text = staticText.button;
 

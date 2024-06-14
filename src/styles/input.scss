@@ -11,3 +11,9 @@
     outline: none;
   }
 }
+
+.error {
+  background: rgba(220, 20, 60, 0.1);
+  transition: all 200ms linear 100ms;
+  border: 1px dashed $crimson;
+}
