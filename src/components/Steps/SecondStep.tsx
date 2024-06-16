@@ -1,4 +1,4 @@
-import Input from '../common/Input/Input';
+import { Input, RadioButton } from '../';
 
 const SecondStep: React.FC = () => {
   return (
@@ -11,14 +11,21 @@ const SecondStep: React.FC = () => {
       />
       <div className='flex flex-col gap-3'>
         Sex
-        <label>
-          Male
-          <input type='radio' name='sex' />
-        </label>
-        <label>
-          Female
-          <input type='radio' name='sex' />
-        </label>
+        <div className='flex gap-3'>
+          <RadioButton
+            label='Male'
+            name='sex'
+            value='male'
+            checked={true}
+            classNameLabel={'flex gap-1 items-center'}
+          />
+          <RadioButton
+            label='Female'
+            name='sex'
+            value='female'
+            classNameLabel={'flex gap-1 items-center'}
+          />
+        </div>
       </div>
       <Input
         name='address'

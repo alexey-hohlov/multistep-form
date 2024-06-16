@@ -37,3 +37,51 @@
     color: $dark;
   }
 }
+
+.radio-button {
+  max-width: min-content;
+
+  input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input[type='radio']:checked + .radio-button-checkmark {
+    background: $dark;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &-label {
+    user-select: none;
+  }
+
+  &-checkmark {
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    border: 1px solid $dark;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      display: none;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    &:hover {
+      background: rgb(244 244 245);
+    }
+  }
+}

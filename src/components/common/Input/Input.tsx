@@ -16,7 +16,7 @@ const Input: React.FC<Props> = ({
   label = '',
   classNameInput = '',
   classNameLabel,
-  isRequired = true,
+  isRequired = false,
   validations,
 }) => {
   const handleValidations = () => {
@@ -36,7 +36,7 @@ const Input: React.FC<Props> = ({
 
   const {
     field,
-    fieldState: { error, isDirty },
+    fieldState: { error },
   } = useController({
     name,
     rules: handleValidations(),
@@ -46,11 +46,13 @@ const Input: React.FC<Props> = ({
   return (
     <label className={classNameLabel}>
       {label}
-      <input
-        {...field}
-        className={`input ${classNameInput} ${error && 'error'}`}
-      />
-      {error && <ErrorIcon />}
+      <div className='input-container'>
+        <input
+          {...field}
+          className={`input ${classNameInput} ${error && 'error'}`}
+        />
+        {error && <ErrorIcon className='error-icon' />}
+      </div>
     </label>
   );
 };

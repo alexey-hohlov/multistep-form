@@ -1,6 +1,7 @@
 // common components
 export { default as Button } from './common/Button';
 export { default as Input } from './common/Input/Input';
+export { default as RadioButton } from './common/RadioButton';
 
 // components
 // Form

@@ -25,7 +25,7 @@ const Form: React.FC = () => {
 
   const onSubmit = (formData: any) => {
     if (isLastStep) {
-      console.log('submit');
+      console.log(formData);
     }
     next();
   };
