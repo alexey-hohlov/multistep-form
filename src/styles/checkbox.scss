@@ -1,0 +1,28 @@
+.checkbox {
+  input {
+    appearance: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: border 100ms linear;
+
+    &:hover {
+      border: 1px solid $dark;
+    }
+
+    &:checked {
+      background-color: $dark;
+      background-image: url(../assets/icons/check-icon.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}

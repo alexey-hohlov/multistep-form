@@ -9,8 +9,8 @@ const Form: React.FC = () => {
   const methods = useForm({ mode: 'onSubmit' });
   const { handleSubmit } = methods;
   const { Steps, back, next, isFirstStep, isLastStep } = useMultiStepForm([
-    FirstStep,
-    SecondStep,
+    // FirstStep,
+    // SecondStep,
     ThirdStep,
   ]);
 

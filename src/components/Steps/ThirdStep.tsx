@@ -1,4 +1,4 @@
-import Input from '../common/Input/Input';
+import { RadioButton, Input, Checkbox } from '../';
 
 const ThirdStep: React.FC = () => {
   return (
@@ -17,29 +17,29 @@ const ThirdStep: React.FC = () => {
       />
       <div className='flex flex-col gap-3'>
         Role
-        <label>
-          Buy
-          <input type='checkbox' />
-        </label>
-        <label>
-          Sell
-          <input type='checkbox' />
-        </label>
-        <label>
-          Partner
-          <input type='checkbox' />
-        </label>
+        <div className='flex gap-3'>
+          <Checkbox label={'Buy'} lablelClassName={'flex flex-col gap-1'} />
+          <Checkbox label={'Sell'} lablelClassName={'flex flex-col gap-1'} />
+          <Checkbox label={'Partner'} lablelClassName={'flex flex-col gap-1'} />
+        </div>
       </div>
       <div className='flex flex-col gap-3'>
         Agreement
-        <label>
-          Yes
-          <input type='radio' name='sex' />
-        </label>
-        <label>
-          No
-          <input type='radio' name='sex' />
-        </label>
+        <div className='flex gap-3'>
+          <RadioButton
+            label='Yes'
+            name='agreement'
+            value='yes'
+            classNameLabel={'flex gap-1 items-center'}
+          />
+          <RadioButton
+            label='No'
+            name='agreement'
+            value='no'
+            classNameLabel={'flex gap-1 items-center'}
+            checked={true}
+          />
+        </div>
       </div>
     </div>
   );
